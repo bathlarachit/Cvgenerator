@@ -1,3 +1,4 @@
+import django_heroku
 """
 Django settings for Cvdownloader project.
 
@@ -113,6 +114,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_L10N = True
+django_heroku.settings(locals())
 
 USE_TZ = True
 

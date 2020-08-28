@@ -1,1 +1,1 @@
-web: gunicorn Cvdownloader.wsgi --log-file-
+web: gunicorn Cvdownloader.wsgi 

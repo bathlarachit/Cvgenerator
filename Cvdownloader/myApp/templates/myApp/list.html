@@ -1,0 +1,34 @@
+{% extends 'myApp/base.html' %}
+{% block title %}
+Perivious CVs
+{% endblock %}
+{% block body %}
+<h2 style="text-align:center;">Check your previous Cv</h2>
+<hr>
+{% if list %}
+<ol>
+
+{% for l in list %}
+<h5> <li>
+
+  <div class="row">
+<div class="col-4">
+    CV-{{l.CVname}}-
+</div>
+    <div class="col-4">
+      <a class="btn  btn-info"href="viewcv/{{l.id}}">Look your CV</a>
+    </div>
+    <div class="col-4">
+<a class="btn btn-info" href="downloadcv/{{l.id}}">Download as PDF</a>
+    </div>
+  </div>
+  </li>
+</h5>
+{% endfor %}
+</ol>
+{% else %}
+<h3 style="text-align:center;">You don't have any privious work</h3>
+<p>Create you Cv now <a href="{% url 'createcv' %}">Create CV</a> </p>
+{%endif%}
+<hr><br>
+{% endblock %}

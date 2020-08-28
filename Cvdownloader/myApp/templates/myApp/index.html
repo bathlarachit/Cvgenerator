@@ -1,0 +1,14 @@
+{% extends 'myApp/base.html' %}
+{% load bootstrap3 %}
+{% block title %}
+Create your cv
+{% endblock %}
+{% block body %}
+<h1 style="text-align:center;">Create your cv Here</h1>
+<form method="post">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  <input type="submit" class="btn btn-outline-success btn-block" value="Create">
+</form>
+<hr>
+{% endblock %}

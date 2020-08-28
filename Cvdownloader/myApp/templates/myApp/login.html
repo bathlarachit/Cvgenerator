@@ -1,0 +1,21 @@
+{% extends 'myApp/base.html' %}
+{% load bootstrap3 %}
+{% block title %}
+login
+{% endblock %}
+{% block body %}
+<div class="">
+  <h3 style="text-align:center;">Login Here</h3>
+
+</div>
+
+
+<form  method="post" >
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  <input type="submit" class="btn btn-outline-success btn-block" value="Login">
+ </form>
+<br>
+<p>New User,Register here <a href="{% url 'signup' %}">Sign up here</a></p>
+<br><br><hr>
+{% endblock %}

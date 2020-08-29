@@ -6,7 +6,7 @@ class User(auth.models.User,auth.models.PermissionsMixin):
         return self.username
 class Cv(models.Model):
     person=models.ForeignKey(auth.models.User,on_delete=models.CASCADE)
-    phone=models.PositiveIntegerField(blank=True,null=True)
+    phone=models.BigIntegerField(blank=True,null=True)
     achievement=models.TextField()
     skills=models.TextField()
     highSchool=models.CharField(max_length=360)

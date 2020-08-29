@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'o-c7$r-$5wa4+qs*=xo^^9qy)ub6$q^a*m8)b@0mk$s2!lry@n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['cvcreator1.herokuapp.com']
 
